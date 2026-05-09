@@ -1,0 +1,217 @@
+.Review {
+    padding-top: 127px;
+}
+
+.review-section {
+    width: 100%;
+    padding-bottom: 32px;
+    color: #fff;
+}
+
+.inner {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+/* 2. 섹션 헤더 */
+/* 2. 섹션 헤더 */
+.review-header {
+    margin-top: 0;
+}
+
+/* SectionTitle 컴포넌트 스타일 오버라이딩 */
+.inner .sectionTitle {
+    margin-bottom: 3px;
+}
+
+.inner .sectionTitle h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.review-header p {
+    font-size: 26px;
+    color: #aaa;
+    margin-top: 0;
+}
+
+/* 3. 리스트 및 카드 레이아웃 */
+.review-section .review-list {
+    display: flex;
+    gap: 32px;
+    /* 카드 사이 간격 */
+    list-style: none;
+    padding-top: 32px;
+    /* 필요시 overflow-x: auto; 로 가로 스크롤 가능 */
+}
+
+.review-card {
+    /* 사용자 요청 고정 수치 반영 */
+    width: 390px;
+    height: 460px;
+    flex-shrink: 0;
+    /* 너비 고정 */
+
+    border-radius: 30px;
+    /* 시안의 둥근 느낌 반영 */
+    overflow: hidden;
+    /* background-color는 하단에만 적용되므로 제거 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. 카드 상단 (이미지 영역) */
+.card-top {
+    position: relative;
+    height: 245px;
+}
+
+.card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(56, 56, 56, 0.7);
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* 5. 카드 하단 (정보 영역) */
+.card-bottom {
+    /* 사용자 요청 고정 높이 반영 */
+    height: 220px;
+    padding: 24px;
+    /* 내부 여백 */
+    box-sizing: border-box;
+    /* 패딩 포함 높이 계산 */
+
+    /* 내부 요소 배치 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* 인라인 스타일로 들어오는 background 그라데이션이 적용됨 */
+    position: relative;
+}
+
+.title-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-row-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.title-row h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    /* 기본 마진 제거 */
+}
+
+.rating {
+    font-size: 15px;
+    font-weight: 600;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-icon {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 1px;
+}
+
+/* 리뷰 텍스트 */
+.review-text {
+    font-size: 12px;
+    color: #c1c1c1;
+    margin: 0;
+}
+
+/* ... 기존 카드 상단 스타일 유지 ... */
+
+/* 🛠️ 유저 정보 영역 레이아웃 수정 */
+.user-row {
+    display: flex;
+    align-items: center;
+    /* padding-top: 32px; */
+    position: absolute;
+    bottom: 30px;
+    left: 24px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    /* 이미지와 텍스트 박스 세로 중앙 */
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* 이름과 메타 정보를 위아래로 배치 */
+.user-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-row .user-info-text .user-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+}
+
+/* 시간과 레벨 아이콘을 가로로 나열 */
+.meta-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.meta-info span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.meta-info .level img {
+    width: 14px;
+    /* 레벨 아이콘 크기 조절 */
+    height: 14px;
+    object-fit: contain;
+    border-radius: 0;
+}
